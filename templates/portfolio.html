@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+<div class="navbar">
+    <div class="logo">MyPortfolio</div>
+    <div class="menu">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('portfolio') }}">Portfolio</a>
+        <a href="{{ url_for('live_data') }}">Live Data</a>
+    </div>
+</div>
+<div class="container">
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+        </ul>
+    </div>
+    <div class="main-content">
+        <h1>My Portfolio</h1>
+        <div>
+            <a href="{{ url_for('login_coinbase') }}" class="btn">Connect to Coinbase</a>
+        </div>
+        {% if portfolio_data %}
+        <h2>Portfolio Data</h2>
+        {{ portfolio_data | safe }}
+        <h2>Analysis Result</h2>
+        {{ analysis_result | safe }}
+        {% else %}
+        <p>No portfolio data available. Please connect to Coinbase to fetch your portfolio data.</p>
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>
+
+
+
+

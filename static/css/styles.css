@@ -1,0 +1,95 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Set global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.navbar {
+    background-color: #0e1e25;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu a {
+    color: #fff;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #00c805;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 60px); /* Full height minus navbar */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #1b2a30;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #00c805;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.file-input, .input, .btn {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #00c805;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #009d04;
+}

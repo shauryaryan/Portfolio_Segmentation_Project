@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Analysis Results</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+<div class="navbar">
+  <div class="logo">MyPortfolio</div>
+  <div class="menu">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Live Data</a>
+    <a href="#">Settings</a>
+  </div>
+</div>
+<div class="container">
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Segments</a></li>
+      <li><a href="#">Analysis</a></li>
+      <li><a href="#">Recommendations</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <h1>Portfolio Analysis Results</h1>
+    {% for table in tables %}
+    <h2>{{ titles[loop.index0] }}</h2>
+    {{ table | safe }}
+    {% endfor %}
+  </div>
+</div>
+</body>
+</html>
